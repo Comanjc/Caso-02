@@ -8,19 +8,22 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import pe.edu.upeu.clase01.dao.Todo;
-import pe.edu.upeu.clase01.entity.Invoices;
+import pe.edu.upeu.clase01.entity.Detalle;
+
 @Component
-public class InvoicesDaoIMpl implements Todo<Invoices>{
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
+public class DetalleDaoImpl implements Todo<Detalle> {
+	
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	
 	@Override
-	public int create(Invoices t) {
+	public int create(Detalle t) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int update(Invoices t) {
+	public int update(Detalle t) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
@@ -32,15 +35,15 @@ public class InvoicesDaoIMpl implements Todo<Invoices>{
 	}
 
 	@Override
-	public Invoices read(int id) {
+	public Detalle read(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Invoices> readAll() {
+	public List<Detalle> readAll() {
 		// TODO Auto-generated method stub
-		return jdbcTemplate.query("select *from invoices", new BeanPropertyRowMapper<Invoices>(Invoices.class));
+		return jdbcTemplate.query("select *from detalle", new BeanPropertyRowMapper<Detalle>(Detalle.class));
 	}
 
 }

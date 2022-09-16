@@ -6,17 +6,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import pe.edu.upeu.clase01.entity.Invoices;
-import pe.edu.upeu.clase01.service.InvoicesService;
+import pe.edu.upeu.clase01.entity.Venta;
+import pe.edu.upeu.clase01.service.VentaService;
 
 @RestController
-public class InvoicesController {
 
-	@Autowired
-	private InvoicesService invoicesService;
+public class VentaController {
 	
-	@GetMapping("/invoices")
-	public List<Invoices> getList(){
-		return invoicesService.readAll();
+	@Autowired
+	private VentaService ventaService;
+	
+	@GetMapping("/venta")
+	public List<Venta> getList(){
+		return ventaService.readAll();
 	}
+
 }
