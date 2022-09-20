@@ -1,16 +1,19 @@
 package pe.edu.upeu.clase01.entity;
 
 import java.io.Serializable;
+
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Venta {
+public class Venta implements Serializable{
    
 	private static final long serialVersionUID= 1L ;
 	
@@ -22,6 +25,8 @@ public class Venta {
 	public void setIdventa(int idventa) {
 		this.idventa = idventa;
 	}
+	
+	
 	public String getFecha() {
 		return fecha;
 	}
